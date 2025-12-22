@@ -7,7 +7,7 @@ const personas = [
     { persona: 'Nena', regalos: [] },
     { persona: 'Nenos', regalos: [] },
     { persona: 'Kuky', regalos: [] },
-    { persona: 'Leny', regalos: [] }
+    { persona: 'Marleny', regalos: [] }
 ];
 
 // LISTA DE REGALOS Y SU CANTIDAD
