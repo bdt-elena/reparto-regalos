@@ -6,6 +6,10 @@
     <title>Reparto de Regalos 🎄</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: "Segoe UI", sans-serif;
             background: linear-gradient(135deg, #f5f6fa, #dfe6e9);
@@ -41,20 +45,37 @@
             box-shadow: 0 0 15px rgba(46,204,113,.6);
         }
 
+        /* ========================= */
+        /* CONTENEDOR GRID */
+        /* ========================= */
+
         .contenedor {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 22px;
         }
 
+        /* 📱 CELULARES */
+        @media (max-width: 760px) {
+            .contenedor {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 10px;
+            }
+        }
+
+        /* ========================= */
+        /* TARJETAS */
+        /* ========================= */
+
         .persona {
             background: #fff;
             border-radius: 16px;
-            padding: 16px;
+            padding: 12px; /* un poco más compacto */
             box-shadow: 0 10px 25px rgba(0,0,0,.12);
             animation: aparecer .6s ease forwards;
             opacity: 0;
             transform: translateY(20px);
+            min-width: 0; /* 🔑 CLAVE */
         }
 
         @keyframes aparecer {
@@ -67,13 +88,14 @@
         .persona h2 {
             text-align: center;
             margin-bottom: 4px;
+            font-size: 14px; /* mejor para 4 columnas */
         }
 
         .contador {
             text-align: center;
-            font-size: 13px;
+            font-size: 11px;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         ul {
@@ -83,10 +105,10 @@
 
         li {
             list-style: none;
-            margin-bottom: 8px;
-            padding: 8px 12px;
+            margin-bottom: 6px;
+            padding: 6px 8px;
             border-radius: 8px;
-            font-size: 14px;
+            font-size: 11px;
             opacity: 0;
             transform: translateX(-10px);
         }
@@ -97,6 +119,34 @@
                 opacity: 0;
             }
         }
+        @media (max-width: 760px) {
+
+            body {
+                font-size: 8px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            .persona h2 {
+                font-size: 12px;
+            }
+
+            .contador {
+                font-size: 8px;
+            }
+
+            li {
+                font-size: 8px;
+            }
+
+            .btn {
+                font-size: 8px;
+                padding: 10px 18px;
+            }
+        }
+
     </style>
 </head>
 <body>
