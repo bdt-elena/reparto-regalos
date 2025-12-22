@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reparto de Regalos 🎄</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #f5f6fa, #dfe6e9);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: block;
+            margin: 20px auto 30px;
+            padding: 14px 26px;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            background: #27ae60;
+            color: #fff;
+            cursor: pointer;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(39,174,96,.4);
+        }
+
+        .btn:disabled {
+            background: #2ecc71;
+            cursor: default;
+            box-shadow: 0 0 15px rgba(46,204,113,.6);
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+        }
+
+        .persona {
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,.12);
+            animation: aparecer .6s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .persona h2 {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .contador {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+
+        @keyframes caer {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎁 Reparto de Regalos 🎄</h1>
+
+    <button class="btn" id="btnSortear">🎲 Sortear regalos</button>
+
+    <div class="contenedor" id="resultado"></div>
+
+    <script src="programming.js"></script>
+</body>
+</html>
