@@ -55,8 +55,10 @@ function colorPorRegalo(regalo) {
     if (r.includes("kat")) return "#09f147ff";
     if (r.includes("sombras")) return "#e82aa5ff";
     if (r.includes("maquillaje")) return "#14d1c1ff";
-    if (r.includes("pijame")) return "#747474ff";
+    if (r.includes("pijama")) return "#747474ff";
     if (r.includes("calcetones")) return "#2213fcff";
+    if (r.includes("denis")) return "#fc1313ff";
+    if (r.includes("calcetines")) return "#b4b4b4ff";
 
     return "#ecf0f1";
 }
