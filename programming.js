@@ -33,7 +33,8 @@ const regalos = [
     { tipo: 'Estuches Sombras', cantidad: 2 },
     { tipo: 'Maquillaje', cantidad: 2 },
     { tipo: 'Pijama', cantidad: 2 },
-    { tipo: 'Calcetones', cantidad: 1 }
+    { tipo: 'Calcetones', cantidad: 1 },
+    { tipo: 'Sorpresa Denis', cantidad: 14 }
 ];
 
 /********************
