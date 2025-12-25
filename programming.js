@@ -9,16 +9,31 @@ const personas = [
     { persona: 'Kuky', regalos: [] },
     { persona: 'Marleny', regalos: [] },
     { persona: 'Mariza', regalos: [] },
-    { persona: 'Denis', regalos: [] }
+    { persona: 'Denis', regalos: [] },
+    { persona: 'Angelica', regalos: [] },
+    { persona: 'Sarita', regalos: [] },
+    { persona: 'Katia', regalos: [] },
+    { persona: 'Katy', regalos: [] },
+    { persona: 'Abuelita', regalos: [] }
 ];
 
 // LISTA DE REGALOS Y SU CANTIDAD
 const regalos = [
     { tipo: 'Peine', cantidad: 6 },
     { tipo: 'Crema de peinar', cantidad: 6 },
-    { tipo: 'Calcetas', cantidad: 11 },
+    { tipo: 'Calcetines', cantidad: 11 },
     { tipo: 'Sueter Termica', cantidad: 8 },
-    { tipo: 'Labial bissu', cantidad: 6 }
+    { tipo: 'Labial bissu', cantidad: 6 },
+    { tipo: 'Labial Ang', cantidad: 10 },
+    { tipo: 'Delineador', cantidad: 10 },
+    { tipo: 'Calcetas Sara', cantidad: 12 },
+    { tipo: 'Mascarillas', cantidad: 10 },
+    { tipo: 'Perfilador', cantidad: 10 },
+    { tipo: 'Labiales Kat', cantidad: 10 },
+    { tipo: 'Estuches Sombras', cantidad: 2 },
+    { tipo: 'Maquillaje', cantidad: 2 },
+    { tipo: 'Pijama', cantidad: 2 },
+    { tipo: 'Calcetones', cantidad: 1 }
 ];
 
 /********************
@@ -31,6 +46,16 @@ function colorPorRegalo(regalo) {
     if (r.includes("calcetas")) return "#ff7675";
     if (r.includes("termica")) return "#81ecec";
     if (r.includes("bissu")) return "#a29bfe";
+    if (r.includes("ang")) return "#478ffaff";
+    if (r.includes("delineador")) return "#70f9a4ff";
+    if (r.includes("sara")) return "#fd63ebff";
+    if (r.includes("mascarillas")) return "#b0ff50ff";
+    if (r.includes("perfilador")) return "#ffb41dff";
+    if (r.includes("kat")) return "#09f147ff";
+    if (r.includes("sombras")) return "#e82aa5ff";
+    if (r.includes("maquillaje")) return "#14d1c1ff";
+    if (r.includes("pijame")) return "#747474ff";
+    if (r.includes("calcetones")) return "#2213fcff";
 
     return "#ecf0f1";
 }
